@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <title>
+    contact
+  </title>
+
+  <!-- fonts awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous" />
+
+  <!-- slick slider -->
+  <link rel="stylesheet" type="text/css" href="./assets/styles/slick.css" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./assets/styles/style.css" />
+</head>
+
+<body>
+  <header class="c-header">
+    <div class="c-header__container">
+      <input id="showMenu" type="checkbox" hidden>
+      <a href="#" class="c-header__link">
+        <span>掲載・取材依頼の企業様へ</span><i class="fas fa-chevron-circle-right"><span class="space">&nbsp;</span></i>
+      </a>
+
+      <div class="c-header__wrapper">
+        <a href="./index.html" class="c-header__logo">
+          <figure>
+            <img src="./assets/images/header/logo.png" alt="logo">
+          </figure>
+        </a>
+        <div class="c-header__menu">
+          <nav class="c-header__nav">
+            <ul>
+              <li><a href="#">企業一覧</a></li>
+              <li><a href="./about.html">愛媛シゴト図鑑とは</a></li>
+              <li><a href="#">インタビュー</a></li>
+              <li><a href="#">ニュース</a></li>
+            </ul>
+          </nav>
+          <div class="c-header__survey">
+            <a href="./contact.html">お問い合わせ</a>
+          </div>
+        </div>
+
+        <div class="c-header__menuSp">
+          <div class="c-header__menuMail">
+            <i class="far fa-envelope"><span class="space">&nbsp;</span></i>
+            <span>お問い合わせ</span>
+          </div>
+          <label for="showMenu" class="c-header__menuOpen">
+            <img src="./assets/images/header/icon_menu.png" alt="icon_menu">
+            <span>メニュー</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="c-header__navSp">
+        <label for="showMenu" class="c-header__menuClose">
+          <img src="./assets/images/header/icon_closemenu.png" alt="icon_closemenu">
+          <span>閉じる</span>
+        </label>
+        <ul class="c-header__navList">
+          <li><a href="./index.html">ホーム</a></li>
+          <li><a href="#">企業一覧</a></li>
+          <li><a href="./about.html">愛媛シゴト図鑑とは</a></li>
+          <li><a href="#">インタビュー</a></li>
+          <li><a href="#">ニュース</a></li>
+          <li><a href="#">運営会社</a></li>
+          <li><a href="./contact.html">お問い合わせ</a></li>
+        </ul>
+        <div class="c-header__contact">
+          <a href="tel:+089-947-1411" class="c-header__tel">
+            <span>TEL.</span>
+            089-947-1411
+          </a>
+          <div class="c-header__time">
+            <p>受付時間9:00〜17:00（平日のみ）</p>
+          </div>
+        </div>
+        <div class="c-header__more">
+          <a class="c-header__request" href="#"><span>掲載・取材のご依頼についてはこちら</span></a>
+          <a class="c-header__policy" href="#">プライバシーポリシー</a>
+          <a class="c-header__terms" href="#">利用規約</a>
+          <label for="showMenu" class="c-header__goback">
+            <i class="fas fa-times"><span class="space">&nbsp;</span></i>閉じる
+          </label>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- end header -->
+  <main class="c-main">
+    <section class="c-contactMv">
+      <div class="c-contactMv__container">
+        <div class="c-contactMv__content">
+          <p>CONTACT</p>
+          <h1>お問い合わせ</h1>
+        </div>
+      </div>
+    </section>
+    <!-- end aboutMv -->
+
+    <section class="c-contactForm" id="contactForm">
+      <div class="c-contactForm__container">
+        <div class="c-contactForm__breadcump">
+          <ul>
+            <li><a href="./index.html">ホーム</a></li>
+            <li><span>></span><a href="./contact.html">お問い合わせ</a></li>
+          </ul>
+        </div>
+
+        <div class="c-contactForm__wrapper">
+          <div class="c-contactForm__heading">
+            <h2>一般･学生の皆様へ</h2>
+            <div class="c-contactForm__note">
+              <p>この度は愛媛シゴト図鑑をご覧いただきありがとうございます。</p>
+              <p>
+                愛媛シゴト図鑑を見て疑問に思ったこと、ご質問等ございましたら下記の問い合わせフォームにて意見をお寄せください。少し聞きづらいなと思うようなことも遠慮なくご質問ください。愛媛シゴト図鑑は頑張る就活生を応援しています！
+              </p>
+              <p>個人情報の取扱に関しましては、<a href="#" class="c-contactForm__note--blue">プライバシーポリシー</a>をご確認ください。
+              </p>
+              <span class="c-contactForm__note--red">※は入力必須です。</span>
+            </div>
+          </div>
+          <form onsubmit="return handleSubmit();" class="c-contactForm__body" id="contactForm" name="contactForm" action="/action_page.php" method="post">
+            <span class="c-contactForm__error c-contactForm__formError">入力内容を確認してください。</span>
+            <ul>
+              <li>
+                <label for="username">氏名 <span>※</span></label>
+                <div class="c-contactFrom__input">
+                  <input onblur="handleInput(name)" oninput="handleInput(name)" name="username" id="username" type="text">
+                  <span class="c-contactForm__error"><span class="space">&nbsp;</span></span>
+                </div>
+              </li>
+              <li>
+                <label for="companyName">会社・学校名</label>
+                <div class="c-contactFrom__input">
+                  <input name="companyName" id="companyName" type="text">
+                </div>
+              </li>
+              <li>
+                <label for="address">住所</label>
+                <div class="c-contactFrom__input c-contactFrom__input--full">
+                  <input name="address" id="address" type="text">
+                </div>
+              </li>
+              <li>
+                <label for="phoneNumber">電話番号 <span>※</span></label>
+                <div class="c-contactFrom__input">
+                  <input onblur="handleInput(name)" oninput="handleInput(name)" name="phoneNumber" id="phoneNumber" type="text">
+                  <span class="c-contactForm__error"><span class="space">&nbsp;</span></span>
+                </div>
+              </li>
+              <li>
+                <label for="email">メールアドレス <span>※</span></label>
+                <div class="c-contactFrom__input">
+                  <input onblur="handleInput(name)" oninput="handleInput(name)" name="email" id="email" type="email">
+                  <span class="c-contactForm__error"><span class="space">&nbsp;</span></span>
+                </div>
+              </li>
+              <li>
+                <label for="survey">本サイトを知ったきっかけ</label>
+                <div class="c-contactFrom__input">
+                  <ul class="c-contactFrom__checkbox">
+                    <li>
+                      <input id="box1" type="checkbox" value="検索" hidden>
+                      <label for="box1">
+                        <span class="c-contactFrom__box"><i class="fas fa-check"><span class="space">&nbsp;</span></i>
+                        </span>
+                        <span>検索</span>
+                      </label>
+                    </li>
+                    <li>
+                      <input id="box2" type="checkbox" value="冊子" hidden>
+                      <label for="box2">
+                        <span class="c-contactFrom__box"><i class="fas fa-check"><span class="space">&nbsp;</span></i>
+                        </span>
+                        <span>冊子</span>
+                      </label>
+                    </li>
+                    <li>
+                      <input id="box3" type="checkbox" value="ネット広告" hidden>
+                      <label for="box3">
+                        <span class="c-contactFrom__box"><i class="fas fa-check"><span class="space">&nbsp;</span></i>
+                        </span>
+                        <span>ネット広告</span>
+                      </label>
+                    </li>
+                    <li>
+                      <input id="box4" type="checkbox" value="口コミ" hidden>
+                      <label for="box4">
+                        <span class="c-contactFrom__box"><i class="fas fa-check"><span class="space">&nbsp;</span></i>
+                        </span>
+                        <span>口コミ</span>
+                      </label>
+                    </li>
+                    <li>
+                      <input id="box5" type="checkbox" value="チラシ" hidden>
+                      <label for="box5">
+                        <span class="c-contactFrom__box"><i class="fas fa-check"><span class="space">&nbsp;</span></i>
+                        </span>
+                        <span>チラシ</span>
+                      </label>
+                    </li>
+                  </ul>
+                  <ul class="c-contactFrom__checkbox">
+                    <li>
+                      <input id="box6" type="checkbox" value="検索" hidden>
+                      <label for="box6">
+                        <span class="c-contactFrom__box"><i class="fas fa-check"><span class="space">&nbsp;</span></i>
+                        </span>
+                        <span>検索</span>
+                      </label>
+                    </li>
+                    <li class="c-contactFrom__input--full">
+                      <input name="survey" id="survey" type="text">
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <label for="comment">お問い合わせ内容 <span>※</span></label>
+                <div class="c-contactFrom__input">
+                  <textarea onblur="handleInput(name)" oninput="handleInput(name)" name="comment" id="comment"></textarea>
+                  <span class="c-contactForm__error"><span class="space">&nbsp;</span></span>
+                </div>
+              </li>
+            </ul>
+            <button class="c-contactForm__submit" type="submit">
+              <span>この内容で送信する</span>
+              <i class="fas fa-chevron-circle-right"><span class="space">&nbsp;</span></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- en contactForm -->
+  </main>
+  <footer class="c-footer">
+    <a href="#" class="c-footer__toTop">
+      <i class="fas fa-chevron-up"><span class="space">&nbsp;</span></i>
+    </a>
+
+    <div class="c-footer__main">
+      <div class="c-footer__container">
+        <div class="c-footer__wrapper">
+          <div class="c-footer__company">
+            <a href="./index.html">
+              <figure>
+                <img src="./assets/images/footer/footer_logo.png" alt="footer_logo">
+              </figure>
+            </a>
+            <p>【運営】株式会社愛媛経済レポート</p>
+            <address class="c-footer__address">〒790-0011　愛媛県松山市千舟町4丁目5-4　松山千舟454ビル5F</address>
+            <address class="c-footer__addressSp">
+              <p>〒790-0011</p>
+              <p>愛媛県松山市千舟町4丁目5-4　松山千舟454ビル5F</p>
+            </address>
+          </div>
+          <div class="c-footer__contact">
+            <div class="c-footer__content">
+              <p>掲載企業に関するご質問や資料請求などお気軽にご相談ください。</p>
+              <a href="tel:+84899471411"><span>TEL.</span>089-947-1411</a>
+              <div class="c-footer__time">
+                <p>受付時間　9:00〜17:00(平日のみ)</p>
+              </div>
+            </div>
+            <div class="c-footer__link">
+              <a href="#"><span>お問い合わせはこちら</span></a>
+              <a href="#"><span>掲載・取材依頼の企業様へ</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="c-footer__copyRight">
+      <p>©2018 Ehime Keizai Report Inc,</p>
+    </div>
+  </footer>
+  <!-- end footer -->
+
+  <!-- JS lib -->
+  <script src="./assets/scripts/jquery.min.js"></script>
+  <script src="./assets/scripts/slick.min.js"></script>
+  <script src="./assets/scripts/main.js"></script>
+  <script src="./assets/scripts/app.js"></script>
+</body>
+
+</html>
