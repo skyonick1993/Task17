@@ -1,0 +1,361 @@
+.c-corp {
+  background-image: url("../images/corporate/corp_bg.jpg");
+  background-position: center;
+  background-repeat: repeat;
+  background-size: auto;
+  min-height: 1224px;
+  height: auto;
+  @include mq(lg, max) {
+    min-height: 1991px;
+  }
+  @include mq(md, max) {
+    min-height: 1553px;
+  }
+
+  .c-corp__container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    padding-top: 50px;
+    padding-bottom: 80px;
+    @include mq(md, max) {
+      padding: 0 15px;
+      padding-top: 35px;
+      padding-bottom: 43px;
+    }
+  }
+
+  .c-corp__wrapper {
+    .c-corp__heading {
+      margin: auto;
+      max-width: 500px;
+      height: 95px;
+      border: 2px solid #000;
+      border-radius: 3px;
+      padding-top: 15px;
+      padding-bottom: 16px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-bottom: 44px;
+      @include mq(md, max) {
+        max-width: 270px;
+        height: 71px;
+        border: 1px solid #000;
+        border-radius: 2px;
+        padding-top: 13px;
+        padding-bottom: 15px;
+        margin-bottom: 23px;
+      }
+
+      > span {
+        display: block;
+        font-size: 2rem;
+        font-weight: bold;
+        color: #00ada0;
+        line-height: 1;
+        @include mq(md, max) {
+          font-size: 2.8rem;
+        }
+      }
+
+      > h2 {
+        font-size: 2.6rem;
+        font-weight: bold;
+        color: #000;
+        line-height: 1;
+        @include mq(md, max) {
+          font-size: 3.2rem;
+        }
+      }
+    }
+
+    .c-corp__title {
+      text-align: center;
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: #000;
+      line-height: 25px;
+      margin-bottom: 45px;
+      letter-spacing: -0.7px;
+      @include mq(md, max) {
+        display: none;
+      }
+    }
+
+    .c-corp__titleSp {
+      display: none;
+      @include mq(md, max) {
+        display: block;
+        text-align: center;
+        font-size: 2.8rem;
+        font-weight: 400;
+        color: #000;
+        line-height: 1.8;
+        margin-bottom: 24px;
+        letter-spacing: -1px;
+      }
+
+      > p:first-child {
+        margin-left: 4px;
+      }
+
+      > p:last-child {
+        padding: 0 3px;
+      }
+    }
+
+    .c-corp__body {
+      @include mq(lg, max) {
+        max-width: 592px;
+        margin: auto;
+      }
+      @include mq(md, max) {
+        max-width: 320px;
+      }
+
+      .c-corp__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -18px -12px;
+        @include mq(md, max) {
+          margin: -12.5px;
+        }
+
+        > li {
+          width: 50%;
+          padding: 18px 12px;
+          padding-right: 15px;
+          @include mq(lg, max) {
+            width: 100%;
+          }
+          @include mq(md, max) {
+            padding: 12.5px;
+          }
+
+          &:nth-child(even) > a > .c-corp__content {
+            padding-left: 16px;
+            @include mq(md, max) {
+              padding-left: 10px;
+            }
+          }
+
+          > a {
+            display: block;
+            position: relative;
+            padding-top: 24px;
+            @include mq(md, max) {
+              padding-top: 15px;
+            }
+
+            @for $i from 1 through 6 {
+              > .c-corp__image#{$i} {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 320px;
+                height: 210px;
+                border: 3px solid #fff;
+                background-image: url("../images/corporate/corp#{$i}.jpg");
+                background-position: right;
+                background-repeat: no-repeat;
+                background-size: cover;
+                @include mq(md, max) {
+                  width: 166px;
+                  height: 124px;
+                  border: 2px solid #fff;
+                  background-image: url("../images/corporate/corp#{$i}_sp.jpg");
+                }
+              }
+            }
+
+            > .c-corp__image5 {
+              @include mq(xl, max) {
+                background-position: right top;
+                background-size: 150%;
+              }
+              @include mq(lg, max) {
+                background-position: right;
+                background-size: cover;
+              }
+            }
+
+            > .c-corp__image6 {
+              @include mq(xl, max) {
+                background-size: 130%;
+              }
+              @include mq(lg, max) {
+                background-size: cover;
+              }
+            }
+
+            > .c-corp__content {
+              margin-left: auto;
+              background-color: #fff;
+              box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
+              width: 284px;
+              min-height: 200px;
+              height: auto;
+              padding-left: 20px;
+              padding-top: 20px;
+              padding-bottom: 30px;
+              position: relative;
+              z-index: 1;
+              @include mq(xl, max) {
+                width: 260px;
+              }
+              @include mq(lg, max) {
+                width: 286px;
+              }
+              @include mq(md, max) {
+                width: 165px;
+                min-height: 156px;
+                padding: 0 10px;
+                padding-top: 13px;
+                padding-bottom: 20px;
+              }
+
+              > h3 {
+                font-size: 1.8rem;
+                font-weight: bold;
+                line-height: 25px;
+                color: #000;
+                @include mq(md, max) {
+                  font-size: 2.8rem;
+                  line-height: 1.25;
+                }
+              }
+
+              > .c-corp__content--ls {
+                letter-spacing: -0.7px;
+                @include mq(md, max) {
+                  letter-spacing: -0.9px;
+                }
+              }
+
+              > span {
+                display: block;
+                font-size: 1.2rem;
+                font-weight: 400;
+                line-height: 22px;
+                color: #000;
+                @include mq(md, max) {
+                  font-size: 2.2rem;
+                  line-height: 1;
+                  margin-top: 4px;
+                  margin-bottom: 3px;
+                }
+              }
+              > .c-corp__info {
+                font-size: 1.4rem;
+                font-weight: bold;
+                line-height: 24px;
+                color: #00ada0;
+                margin-top: 8px;
+                margin-bottom: 5px;
+                letter-spacing: -0.8px;
+                @include mq(md, max) {
+                  margin-top: 0;
+                  margin-bottom: 0;
+                  font-size: 2.4rem;
+                  line-height: 1.5;
+                  letter-spacing: -0.5px;
+
+                  > p {
+                    display: inline;
+                  }
+                }
+
+                > .c-corp__info--ml {
+                  margin-left: -8px;
+                }
+              }
+
+              .c-corp__category {
+                display: inline-block;
+                background-color: #cccccc;
+                border-radius: 10px;
+                padding: 0 10px;
+                font-size: 1.2rem;
+                font-weight: 400;
+                line-height: 21px;
+                text-align: center;
+                color: #000;
+                margin-top: 20px;
+                @include mq(md, max) {
+                  font-size: 2.2rem;
+                  margin-top: 12px;
+                  padding: 0 10px;
+                }
+              }
+
+              .c-corp__category--ls {
+                letter-spacing: -1.4px;
+              }
+
+              .c-corp__category--ml {
+                margin-left: -5px;
+                letter-spacing: -1px;
+                @include mq(md, max) {
+                  margin-left: 0;
+                }
+              }
+            }
+
+            > .c-corp__content--pt {
+              padding-top: 15px;
+              @include mq(md, max) {
+                padding-top: 13px;
+              }
+            }
+          }
+        }
+      }
+
+      .c-corp__link {
+        display: block;
+        position: relative;
+        background-color: #00ada0;
+        max-width: 450px;
+        height: 60px;
+        margin: auto;
+        margin-top: 33px;
+        box-shadow: 4px 4px 0px 0px #000;
+        @include mq(md, max) {
+          max-width: 270px;
+          height: 38px;
+          margin-top: 32px;
+          box-shadow: 2px 2px 0px 0px #000;
+        }
+
+        > p {
+          text-align: center;
+          font-size: 1.6rem;
+          font-weight: bold;
+          color: #fff;
+          line-height: 60px;
+
+          @include mq(md, max) {
+            font-size: 2.6rem;
+            line-height: 38px;
+          }
+        }
+
+        > i {
+          position: absolute;
+          right: 20px;
+          top: 50%;
+          transform: translateY(-50%);
+          font-size: 2rem;
+          line-height: 1;
+          color: #fff;
+          @include mq(md, max) {
+            font-size: 3rem;
+            right: 34px;
+          }
+        }
+      }
+    }
+  }
+}

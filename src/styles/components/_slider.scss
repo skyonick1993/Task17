@@ -1,0 +1,81 @@
+.c-slider {
+    position: relative;
+    @include mq(md, max) {
+        margin-top: 70px;
+    }
+    .c-slider__list {
+        @for $i from 1 through 4 {
+            .c-slider__item#{$i} {
+                background-image: url("../images/slider/bg_slider#{$i}.jpg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 700px;
+
+                @include mq(md, max) {
+                    background-image: url("../images/slider/bg_sliderSp#{$i}.jpg");
+                    height: 374px;
+                    background-size: 104%;
+                }
+            }
+        }
+    }
+
+    .c-slider__container {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 100%;
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        padding: 0 20px;
+        @include mq(md, max) {
+            padding: 0 15px;
+        }
+
+        .c-slider__content {
+            position: absolute;
+            bottom: 50px;
+            left: 20px;
+            @include mq(md, max) {
+                bottom: 25px;
+                left: 16px;
+                width: 100%;
+                max-width: 290px;
+            }
+
+            > figure {
+                display: flex;
+                height: 200px;
+                @include mq(md, max) {
+                    height: 100px;
+                }
+            }
+
+            .c-slider__info {
+                background-color: rgba(255, 255, 255, 0.2);
+                border-radius: 3px;
+                max-width: 562px;
+                text-align: center;
+                margin-top: 35px;
+                @include mq(md, max) {
+                    border-radius: 2px;
+                }
+
+                > h1 {
+                    font-size: 2rem;
+                    line-height: 1.75;
+                    font-weight: bold;
+                    color: #fff;
+                    @include mq(md, max) {
+                        font-size: 3.2rem;
+                        line-height: 25px;
+                        margin-left: 4px;
+                    }
+                }
+            }
+        }
+    }
+}

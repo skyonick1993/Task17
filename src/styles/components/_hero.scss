@@ -1,0 +1,270 @@
+.c-hero {
+    background-image: url("../images/hero/hero_bg.jpg");
+    background-position: center;
+    background-repeat: repeat;
+    background-size: auto;
+    height: 632px;
+    @include mq(md, max) {
+        height: 430px;
+    }
+
+    .c-hero__container {
+        padding: 50px 0;
+        @include mq(md, max) {
+            padding: 35px 0;
+        }
+    }
+
+    .c-hero__wrapper {
+        > .c-hero__heading {
+            margin: auto;
+            max-width: 500px;
+            height: 95px;
+            border: 2px solid #acdeda;
+            border-radius: 3px;
+            padding: 17px 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-bottom: 60px;
+            @include mq(md, max) {
+                max-width: 268px;
+                height: 68px;
+                border: 1px solid #acdeda;
+                border-radius: 2px;
+                padding: 15px 0;
+                margin-bottom: 35px;
+            }
+
+            > span {
+                display: block;
+                font-size: 2rem;
+                font-weight: bold;
+                color: rgba(255, 255, 255, 0.502);
+                line-height: 0.7;
+                @include mq(md, max) {
+                    line-height: 1;
+                    font-size: 2.8rem;
+                }
+            }
+
+            > h2 {
+                font-size: 2.6rem;
+                font-weight: bold;
+                color: #fff;
+                line-height: 1;
+                letter-spacing: -1px;
+                @include mq(md, max) {
+                    font-size: 3.2rem;
+                    letter-spacing: -1px;
+                }
+            }
+        }
+
+        > .c-hero__body {
+            position: relative;
+            > .c-hero__list {
+                > .slick-list {
+                    margin: 0 -7px;
+                    @include mq(lg, max) {
+                        margin: 0 -15px;
+                    }
+                    @include mq(md, max) {
+                        margin: 0 -7.5px;
+                    }
+
+                    > .slick-track {
+                        -webkit-transform: translate3d(-237px, 0px, 0px);
+                        -moz-transform: translate3d(-237px, 0px, 0px);
+                        -ms-transform: translate3d(-237px, 0px, 0px);
+                        -o-transform: translate3d(-237px, 0px, 0px);
+                        transform: translate3d(-237px, 0px, 0px);
+                        > li {
+                            padding: 0 7px;
+                            @include mq(lg, max) {
+                                padding: 0 15px;
+                            }
+                            @include mq(md, max) {
+                                padding: 0 7.5px;
+                            }
+
+                            > a {
+                                display: block;
+                                background-color: #fff;
+                                width: 330px;
+                                height: 327px;
+                                @include mq(md, max) {
+                                    width: 165px;
+                                    height: 216px;
+                                }
+
+                                > figure {
+                                    width: 330px;
+                                    height: 220px;
+                                    position: relative;
+                                    @include mq(md, max) {
+                                        width: 165px;
+                                        height: 110px;
+                                    }
+
+                                    > figcaption {
+                                        position: absolute;
+                                        right: 0;
+                                        bottom: 0;
+                                        height: 30px;
+                                        background-color: #fff;
+                                        padding: 0 10px;
+                                        @include mq(md, max) {
+                                            height: 22px;
+                                        }
+
+                                        > span {
+                                            display: block;
+                                            font-size: 1.5rem;
+                                            font-weight: bold;
+                                            line-height: 2;
+                                            color: #00ada0;
+                                            letter-spacing: -1px;
+                                            @include mq(md, max) {
+                                                font-size: 2.4rem;
+                                                line-height: 22px;
+                                                letter-spacing: -0.5px;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .c-hero__content {
+                                    padding: 10px;
+                                    padding-top: 9px;
+                                    @include mq(md, max) {
+                                        padding: 4px;
+                                    }
+
+                                    > p {
+                                        font-size: 1.6rem;
+                                        font-weight: bold;
+                                        line-height: 25px;
+                                        color: #000000;
+                                        letter-spacing: -0.5px;
+                                        @include mq(md, max) {
+                                            font-size: 2.4rem;
+                                            line-height: 1.5;
+                                            letter-spacing: 0;
+                                        }
+                                    }
+
+                                    > span {
+                                        display: block;
+                                        font-size: 1.4rem;
+                                        font-weight: 400;
+                                        line-height: 1.25;
+                                        margin-top: 13px;
+                                        color: #000000;
+                                        @include mq(md, max) {
+                                            font-size: 2.2rem;
+                                            line-height: 1.82;
+                                            margin-top: 0;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                > .c-hero__btnLeft {
+                    z-index: 1;
+                    background-color: rgba(0, 0, 0, 0.8);
+                    width: 70px;
+                    height: 70px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50px;
+                    transform: translateY(-50%);
+                    @include mq(xl, max) {
+                        left: 20px;
+                    }
+
+                    > figure {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 40px;
+                    }
+                }
+
+                > .c-hero__btnRight {
+                    z-index: 1;
+                    background-color: rgba(0, 0, 0, 0.8);
+                    width: 70px;
+                    height: 70px;
+                    position: absolute;
+                    top: 50%;
+                    right: 50px;
+                    transform: translateY(-50%);
+                    @include mq(xl, max) {
+                        right: 20px;
+                    }
+
+                    > figure {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 40px;
+                    }
+                }
+
+                > .slick-dots {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: absolute;
+                    bottom: -50px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    @include mq(md, max) {
+                        bottom: -31px;
+                    }
+
+                    > li > button {
+                        font-size: 0;
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                        background-color: #ffffff;
+                        margin: 0 10px;
+                        position: relative;
+                        @include mq(md, max) {
+                            width: 8px;
+                            height: 8px;
+                            margin: 0 8px;
+                        }
+                    }
+
+                    > li.slick-active > button {
+                        background-color: #000000;
+                        &::before {
+                            content: "";
+                            width: 18px;
+                            height: 18px;
+                            background-color: transparent;
+                            border-radius: 50%;
+                            border: 1px solid #000000;
+                            position: absolute;
+                            top: -5px;
+                            left: -5px;
+                            @include mq(md, max) {
+                                width: 14px;
+                                height: 14px;
+                                top: -4px;
+                                left: -4px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

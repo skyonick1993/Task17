@@ -1,0 +1,439 @@
+.c-contactMv {
+  background-image: url("../images/contact/contact_Mv.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  @include mq(md, max) {
+    margin-top: 70px;
+  }
+
+  .c-contactMv__container {
+    max-width: 1160px;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 50px;
+    @include mq(md, max) {
+      justify-content: center;
+      padding-top: 50px;
+    }
+
+    .c-contactMv__content {
+      text-align: center;
+
+      > p {
+        font-size: 5rem;
+        font-weight: bold;
+        font-family: "Franklin Gothic", sans-serif;
+        line-height: 1;
+        color: #fefefe;
+        margin-bottom: 8px;
+        @include mq(md, max) {
+          font-size: 6rem;
+          text-shadow: 0px 0px 5px rgb(136 136 136 / 75%);
+        }
+      }
+
+      > h1 {
+        font-size: 2.4rem;
+        font-weight: bold;
+        font-family: "Franklin Gothic", sans-serif;
+        line-height: 1;
+        color: #fefefe;
+        @include mq(md, max) {
+          font-size: 3.2rem;
+          text-shadow: 0px 0px 5px rgb(136 136 136 / 75%);
+        }
+      }
+    }
+  }
+}
+
+.c-contactForm {
+  padding-bottom: 130px;
+  @include mq(md, max) {
+    padding-bottom: 30px;
+  }
+
+  .c-contactForm__container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    @include mq(md, max) {
+      padding: 0 15px;
+    }
+
+    .c-contactForm__breadcump {
+      height: 80px;
+      border-bottom: 1px solid #cccccc;
+      @include mq(md, max) {
+        height: 60px;
+      }
+
+      > ul {
+        display: flex;
+        align-items: center;
+        height: 100%;
+
+        > li {
+          display: flex;
+          align-items: center;
+          margin-left: 17px;
+          @include mq(md, max) {
+            margin-left: 10px;
+          }
+
+          > a {
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: #000000;
+            line-height: 1.7;
+            margin-top: -6px;
+            letter-spacing: -0.5px;
+            @include mq(md, max) {
+              font-size: 2.6rem;
+            }
+          }
+
+          > span {
+            display: block;
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: #000000;
+            line-height: 1.7;
+            margin-right: 15px;
+            margin-top: -6px;
+            @include mq(md, max) {
+              margin-right: 10px;
+            }
+          }
+        }
+
+        > li:first-child {
+          margin-left: 0;
+
+          > a {
+            color: #00ada0;
+            border-bottom: 1px solid #00ada0;
+          }
+        }
+      }
+    }
+
+    .c-contactForm__wrapper {
+      padding-top: 48px;
+      max-width: 780px;
+      margin: auto;
+      @include mq(md, max) {
+        padding-top: 30px;
+      }
+
+      .c-contactForm__heading {
+        margin-bottom: 17px;
+        @include mq(md, max) {
+          margin-bottom: 16px;
+        }
+
+        > h2 {
+          text-align: center;
+          font-size: 2.4rem;
+          font-weight: bold;
+          line-height: 1;
+          color: #000000;
+          margin-bottom: 32px;
+          @include mq(md, max) {
+            font-size: 3.2rem;
+            margin-bottom: 20px;
+          }
+        }
+
+        > .c-contactForm__note {
+          font-size: 1.4rem;
+          font-weight: 400;
+          line-height: 2;
+          color: #000000;
+          @include mq(md, max) {
+            font-size: 2.4rem;
+          }
+
+          .c-contactForm__note--blue {
+            font-weight: bold;
+            color: #00ada0;
+          }
+
+          .c-contactForm__note--red {
+            color: #fd0000;
+          }
+        }
+      }
+
+      .c-contactForm__body {
+        .c-contactForm__error {
+          display: block;
+          font-size: 1.4rem;
+          font-weight: 400;
+          line-height: 24px;
+          color: #ff0000;
+          margin-top: 4px;
+          margin-bottom: 15px;
+          @include mq(md, max) {
+            font-size: 2.4rem;
+            line-height: 1.7;
+            margin-top: 0;
+            margin-bottom: 10px;
+          }
+        }
+
+        .c-contactForm__formError {
+          opacity: 0;
+          visibility: hidden;
+
+          &.is-actived {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+
+        > ul > li {
+          display: flex;
+          align-items: flex-start;
+          min-height: 86px;
+          border-bottom: 1px solid #c5c5c5;
+          padding-top: 20px;
+          @include mq(md, max) {
+            display: block;
+            padding-top: 10px;
+            min-height: 80px;
+          }
+
+          &:last-child {
+            padding-bottom: 5px;
+          }
+
+          > label {
+            cursor: pointer;
+            min-width: 250px;
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: #000000;
+            line-height: 1.75;
+            @include mq(md, max) {
+              min-width: auto;
+              font-size: 2.8rem;
+            }
+
+            > span {
+              font-size: 1.6rem;
+              font-weight: 400;
+              font-family: "Kozuka Gothic Pr6N", sans-serif;
+              color: #ff0000;
+              @include mq(md, max) {
+                font-size: 2.8rem;
+              }
+            }
+          }
+
+          .c-contactFrom__input {
+            flex-grow: 1;
+
+            > input {
+              width: 390px;
+              height: 45px;
+              background-color: #f2f2f2;
+              font-size: 1.6rem;
+              font-weight: 400;
+              font-family: "Noto Sans JP", sans-serif;
+
+              @include mq(md, max) {
+                width: 100%;
+                height: 30px;
+                font-size: 2.8rem;
+              }
+            }
+
+            > textarea {
+              resize: none;
+              width: 100%;
+              height: 210px;
+              background-color: #f2f2f2;
+              font-size: 1.6rem;
+              font-weight: 400;
+              font-family: "Noto Sans JP", sans-serif;
+              @include mq(md, max) {
+                height: 130px;
+                font-size: 2.8rem;
+              }
+            }
+
+            .c-contactFrom__checkbox {
+              display: flex;
+              flex-wrap: wrap;
+              margin-bottom: 15px;
+              @include mq(md, max) {
+                margin-bottom: 10px;
+              }
+
+              &:first-child {
+                @include mq(md, max) {
+                  margin-bottom: 0;
+                }
+
+                > li {
+                  @include mq(md, max) {
+                    padding: 7.5px 0;
+                  }
+                }
+              }
+
+              &:last-child {
+                margin-bottom: 20px;
+                @include mq(md, max) {
+                  margin-bottom: 15px;
+                }
+              }
+
+              > li:last-child {
+                margin-right: 0;
+              }
+
+              > li {
+                display: flex;
+                align-items: center;
+                margin-right: 35px;
+                @include mq(lg, max) {
+                  margin-right: 25px;
+                }
+
+                > input:checked ~ label .c-contactFrom__box > i {
+                  opacity: 1;
+                  visibility: visible;
+                  transform: scale(1);
+                }
+
+                > label {
+                  display: flex;
+                  align-items: center;
+                  cursor: pointer;
+
+                  > span {
+                    font-size: 1.6rem;
+                    font-weight: bold;
+                    line-height: 1;
+                    color: #000000;
+                    @include mq(md, max) {
+                      font-size: 2.8rem;
+                    }
+                  }
+
+                  .c-contactFrom__box {
+                    display: block;
+                    width: 17px;
+                    height: 17px;
+                    background-color: transparent;
+                    border: 1px solid #c2c2c2;
+                    margin-right: 10px;
+                    text-align: center;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    @include mq(md, max) {
+                      width: 15px;
+                      height: 15px;
+                      margin-right: 5px;
+                    }
+
+                    > i {
+                      font-size: 1.2rem;
+                      line-height: 1;
+                      color: #00ada0;
+                      transform: scale(0);
+                      opacity: 0;
+                      visibility: hidden;
+                      transition: all 0.2s ease-in-out;
+                      @include mq(md, max) {
+                        font-size: 2.2rem;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          .c-contactFrom__input--full {
+            flex-grow: 1;
+            > input {
+              width: 100%;
+              height: 45px;
+              background-color: #f2f2f2;
+              font-size: 1.6rem;
+              font-weight: 400;
+              font-family: "Noto Sans JP", sans-serif;
+              @include mq(md, max) {
+                height: 30px;
+                font-size: 2.8rem;
+              }
+            }
+          }
+        }
+
+        .c-contactForm__submit {
+          display: block;
+          position: relative;
+          background-color: #00ada0;
+          width: 100%;
+          max-width: 450px;
+          height: 60px;
+          margin: auto;
+          margin-top: 48px;
+          box-shadow: 4px 4px 0px 0px #000;
+          @include mq(md, max) {
+            max-width: 270px;
+            height: 38px;
+            margin-top: 32px;
+            box-shadow: 2px 2px 0px 0px #000;
+          }
+
+          &:hover {
+            opacity: 0.7;
+          }
+
+          > span {
+            display: block;
+            text-align: center;
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: #fff;
+            line-height: 60px;
+
+            @include mq(md, max) {
+              font-size: 2.6rem;
+              line-height: 38px;
+            }
+          }
+
+          > i {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            line-height: 1;
+            color: #fff;
+            @include mq(md, max) {
+              font-size: 3rem;
+              right: 34px;
+            }
+          }
+        }
+      }
+
+      .c-contactForm__body > ul > li:first-child {
+        border-top: 1px solid #c5c5c5;
+      }
+    }
+  }
+}
